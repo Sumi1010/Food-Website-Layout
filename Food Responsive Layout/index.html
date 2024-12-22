@@ -1,0 +1,508 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzaro -Fast Food Restaurant</title>
+  <link rel="stylesheet" href="style.css"><!--style sheet link-->
+  <link rel="preconnect" href="https://fonts.googleapis.com"><!--open sans and yano-ne font link--->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Yanone+Kaffeesatz:wght@200..700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"   /><!--font awesome link-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <!--bootstrap 4 cdn-->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="navigation-bar">
+    <div class="container">
+      <div class="container-nav">
+        <div class="row">
+          <div class="col-lg-3">
+            <a class="main-nav" href="#">
+              <svg class="pizzaro-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52.39">
+                <path class="cls-1"
+                  d="M51.33,16.15A5.61,5.61,0,0,0,56,10.88a4,4,0,0,0-4.67-4,5.38,5.38,0,0,0-4.67,5.22A4.07,4.07,0,0,0,51.33,16.15ZM21.42,3.69C6.1,5.62,0,17.8,0,25.47a16.41,16.41,0,0,0,2.6,8.68l5.62-4.92A11,11,0,0,1,7,24.48c0-5.22,5-13,14.42-14.18,8.17-1,10.5,4.17,10.5,8.48,0,8.21-8.17,14.51-14.42,11.78l3.23-8.35A10.87,10.87,0,0,1,25,16.72l-1.54-4.39c-5.3.67-9,5.19-10.5,9.05L1.17,52.4,9.6,51.34l5.73-15.11C29.59,40.35,40,28.8,40,17.72,40,9.67,34.47,2.05,21.42,3.69ZM197,12.22c-2.17,4-4.77,6.3-7.37,7.06A25.1,25.1,0,0,0,192,9.22c0-6.18-3.55-9.47-10-8.66-8.82,1.11-13.92,9-15.71,15.8-4,7.28-6.48,10.81-7.94,11-0.74.09-2-.6,0.42-6.88l1.48-4a8,8,0,0,0,.64-2.74c0-4-6.52-6.16-8.7-7.81L154,1.49,150.53,0c-2.17,1-5,4.2-5,6.92a4,4,0,0,0,1.64,3c-1.54,3.6-3,6.83-4.19,9.06h0c-3.82,7-7.42,11.22-9.54,11.49-1,.12-1.86-0.57.53-6.89l6.58-17.14-9.92,4.87s-1.17-4.17-6.31-3.52c-6.81.86-11.07,8.78-13.14,15.62-3.48,6.34-6.05,7.74-8,8-2.7.34-4.67-1.38-7.11-1.45l15.54-16.19-2.76-3.33c-5.2,2.63-9.17.46-13.52,1-6.36.8-7.58,6.71-12,15.05h0c-3.61,6.74-6.26,8.19-8.22,8.44-2.7.34-4.67-1.38-7.11-1.45L83.56,17.34,80.81,14c-5.2,2.63-9.17.46-13.52,1-6.36.8-7.58,6.71-12,15.05h0c-3.76,7-7.42,11.22-9.54,11.49-0.9.11-1.86-.51,0.58-6.9l6.52-17.13L44.38,18.6l-6,15.62c-3.87,10.13-.48,13.54,4.35,12.94,6.1-.77,11.4-7.62,15.48-15.33h0c3.45-6.51,4.56-7.93,7-8.24,2.23-.28,4.19.48,5.83,0.6L54.51,41.31l2.76,3.33c5.57-5.28,7.05-.2,13.63-1,6.73-.85,11-7.09,15.43-15.32h0c3.45-6.51,4.56-7.93,7-8.24,2.23-.28,4.19.48,5.83,0.6L82.61,37.77l2.76,3.33c5.57-5.29,7.05-.2,13.63-1,4.39-.55,7.72-3.4,10.74-7.59,0.25,3.46,2.25,6,6,5.49,4.67-.59,8.32-5.47,8.32-5.47s0.69,4.34,6.2,3.64c6.47-.81,11.61-7.59,15.75-15.36h0a93.45,93.45,0,0,0,4.24-9.11c1.43,1,2.6,1.86,2.6,2.92a5.62,5.62,0,0,1-.48,1.93L150.64,21c-3.82,9.91.58,12.45,4.72,11.93s7.48-4.12,10.53-8.89c0.9,4.5,4.34,7,9.93,6.31a16.62,16.62,0,0,0,11.08-6.67c5.41-.25,10.23-4.43,13.1-9.75A3.52,3.52,0,0,0,197,12.22ZM125,26.2s-2.44,4.14-5.36,4.51c-1.06.13-1.7-.37-1.7-1.76,0-3.41,3.92-13.87,8.11-14.4,2.33-.29,2.39,2.68,2.39,2.68Zm57.9-12.09a4.93,4.93,0,0,0-4.51,4.83,3.79,3.79,0,0,0,1.17,2.84c-1.17,1.69-2.49,2.93-3.76,3.09S173.7,24,173.7,22.3c0-3.94,4.08-15.65,8.27-16.18C183.09,6,184,6.66,184,8.63A18.75,18.75,0,0,1,182.87,14.11Z"
+                  transform="translate(0 -0.01)"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="col-lg-4">
+            <nav class="navbar navbar-expand-sm">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Order</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+                    Pages
+                  </a>
+                  <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Link 1</a>
+                    <a class="dropdown-item" href="#">Link 2</a>
+                    <a class="dropdown-item" href="#">Link 3</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">News</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Store Locator</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="col-lg-3">
+            <div class="header-phone-no">
+              <span class="call-text"> Call and Order in</span>
+              <select class="city-ph-no">
+                <option value="54 256 896 856">London</option>
+                <option value="54 256 896 856">New York</option>
+                <option value="54 256 896 856">Paris</option>
+              </select>
+            </div>
+            <div class="phone-number">
+              <span class="main-ph-no">54 584 698 758</span>
+            </div>
+          </div>
+          <div class="col-lg-2">
+            <div class="go-to-cart">
+              <img src="images/scooter.png" class="scooter">
+              <span>Go to Cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="food-items">
+            <ul class="menu">
+              <li><a href="#"><img src="images/pizza-slice.png">Pizza</a></li>
+              <li><a href="#"><img src="images/taco.png">Taco</a></li>
+              <li><a href="#"><img src="images/salad.png">Salad</a></li>
+              <li><a href="#"><img src="images/french-fries.png">Fries</a></li>
+              <li><a href="#"><img src="images/pizza-slice.png">Pizza</a></li>
+              <li><a href="#"><img src="images/salad.png">Salad</a></li>
+              <li><a href="#"><img src="images/french-fries.png">Fries</a></li>
+              <li><a href="#"><img src="images/water.png">Drinks</a></li>
+            </ul>
+
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="demo" class="carousel slide" data-ride="carousel">
+    <ul class="carousel-indicators">
+      <li data-target="#demo" data-slide-to="0" class="active"></li>
+      <li data-target="#demo" data-slide-to="1"></li>
+      <li data-target="#demo" data-slide-to="2"></li>
+    </ul>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="images/homepage-slider-2.jpg" alt="slider1" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="images/homepage-slider-4.jpg" alt="slider2" style="width:100%">
+      </div>
+      <div class="carousel-item">
+        <img src="images/homepage-slider-3.jpg" alt="slider3" style="width:100%">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#demo" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+    <a class="carousel-control-next" href="#demo" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div>
+  <div class="food-cards">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="caption1">
+            <h3>grilled chicken</h3>
+            <h4>Summer Pizza</h4>
+            <span>hot&spicy</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="caption2">
+                <div class="caption2-1">
+                  <h3>free</h3>
+                  <h4>fries</h4>
+                  <span>for online orders in wednesdays</span>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="caption3">
+                <div class="caption3-1">
+                  <h3>ICED COFFEE</h3>
+                  <h4>SUMMERS</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="caption4">
+                <div class="caption4-1">
+                  <h3><span>ORDER</span>ONLINE</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pizza-sets">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <nav>
+            <ul class="navbar-nav">
+              <li class="nav-item"><a href="#" class="nav-link">Wrapper</a></li>
+              <li class="nav-item1"><a href="#" class="nav-link active">Pizza Sets</a></li>
+              <li class="nav-item"><a href="#" class="nav-link">Burgers</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="dish-tab">
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="tab1">
+              <img src="images/pizza1.jpg">
+              <div class="pizza1-caption">
+                <h3>Italiano Original</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+                <div class="add-to-cart1">
+                  <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tab2">
+              <img src="images/pizza2.jpg">
+              <div class="pizza2-caption">
+                <h3>Chicken Hawaii</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+              </div>
+              <div class="add-to-cart2">
+                <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="tab3">
+              <img src="images/pizza3.jpg">
+              <div class="pizza3-caption">
+                <h3>Summer Pizza</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+                <div class="add-to-cart3">
+                  <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="offer-page">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="free-delivery">
+            <h3>FREE DELIVERY</h3>
+            <h2>PIZZA OF THE DAY</h2>
+            <div class="product-details">
+              <div class="price">
+                <span class="currency">$</span><span class="big-digit">9</span>
+                <span class="decimals">99</span>
+                <span class="price-info">EACH</span>
+
+              </div>
+              <div class="info">
+                <ul>
+                  <li>- VEGGE LOVER</li>
+                  <li>- SUMMER PIZZA</li>
+                  <li>- CHICKEN HAWAII</li>
+                </ul>
+
+              </div>
+            </div>
+            <a href="#" class="order-now">Order now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="goes-great">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Goes Great With</h2>
+        </div>
+      </div>
+      <div class="cuisine-tab">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="tab1">
+              <img src="images/pizza1.jpg" class="pizza-img">
+              <div class="pizza3-caption">
+                <h3>Trio Cheese</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+                <div class="add-to-cart3">
+                  <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="tab2">
+              <img src="images/pizza2.jpg" class="pizza-img">
+              <div class="pizza3-caption">
+                <h3>Trio Cheese</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+                <div class="add-to-cart3">
+                  <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="tab3">
+              <img src="images/pizza3.jpg" class="pizza-img">
+              <div class="pizza3-caption">
+                <h3>Trio Cheese</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+                <div class="add-to-cart3">
+                  <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <div class="tab4">
+              <img src="images/pizza1.jpg" class="pizza-img">
+              <div class="pizza3-caption">
+                <h3>Trio Cheese</h3>
+                <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+                <h3 class="pick-size"><span>Pick Size</span></h3>
+                <div class="price-label">
+                  <span class="size">
+                    <span>22cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$19</span>
+                  </span>
+                  <span class="size">
+                    <span>29cm</span>
+                  </span>
+                  <span class="price">
+                    <span>$25</span>
+                  </span>
+                </div>
+                <div class="add-to-cart3">
+                  <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pepporoni-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="pepporoni-caption">
+            <h3>Pepperoni Pizza</h3>
+            <p>Extra-virgin olive oil, garlic, mozzarella, mushrooms and olives.</p>
+            <h3 class="pick-size"><span>Pick Size</span></h3>
+            <div class="price-label">
+              <span class="size">
+                <span>22cm</span>
+              </span>
+              <span class="price">
+                <span>$19.90</span>
+              </span>
+              <span class="size">
+                <span>29cm</span>
+              </span>
+              <span class="price">
+                <span>$25.20</span>
+              </span>
+            </div>
+            <div class="add-to-cart">
+              <span><img src="images/tick-inside-circle.png">Add to Cart</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container-fluid">
+      <ul class="footer-images">
+        <li><a href="#"><img src="images/footer1.jpg"></a></li>
+        <li><a href="#"><img src="images/footer2.jpg"></a></li>
+        <li><a href="#"><img src="images/footer3.jpg"></a></li>
+        <li><a href="#"><img src="images/footer4.jpg"></a></li>
+        <li><a href="#"><img src="images/footer5.jpg"></a></li>
+        <li><a href="#"><img src="images/footer6.jpg"></a></li>
+      </ul>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="icons">
+            <ul>
+              <li><a href=#><i class="fa-brands fa-facebook-f fa-lg" style="color: #969696;"></i></a></li>
+              <li><a href=#><i class="fa-brands fa-twitter fa-lg" style="color: #969696;"></i></a></li>
+              <li><a href=#><i class="fa-brands fa-instagram fa-lg" style="color: #969696;"></i></a></li>
+              <li><a href=#><i class="fa-brands fa-youtube fa-lg" style="color: #969696;"></i></a></li>
+              <li><a href=#><i class="fa-solid fa-basketball fa-lg" style="color: #969696;"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="footer-logo">
+            <svg class="pizzaro-logo" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 52.39">
+              <path class="cls-1"
+                d="M51.33,16.15A5.61,5.61,0,0,0,56,10.88a4,4,0,0,0-4.67-4,5.38,5.38,0,0,0-4.67,5.22A4.07,4.07,0,0,0,51.33,16.15ZM21.42,3.69C6.1,5.62,0,17.8,0,25.47a16.41,16.41,0,0,0,2.6,8.68l5.62-4.92A11,11,0,0,1,7,24.48c0-5.22,5-13,14.42-14.18,8.17-1,10.5,4.17,10.5,8.48,0,8.21-8.17,14.51-14.42,11.78l3.23-8.35A10.87,10.87,0,0,1,25,16.72l-1.54-4.39c-5.3.67-9,5.19-10.5,9.05L1.17,52.4,9.6,51.34l5.73-15.11C29.59,40.35,40,28.8,40,17.72,40,9.67,34.47,2.05,21.42,3.69ZM197,12.22c-2.17,4-4.77,6.3-7.37,7.06A25.1,25.1,0,0,0,192,9.22c0-6.18-3.55-9.47-10-8.66-8.82,1.11-13.92,9-15.71,15.8-4,7.28-6.48,10.81-7.94,11-0.74.09-2-.6,0.42-6.88l1.48-4a8,8,0,0,0,.64-2.74c0-4-6.52-6.16-8.7-7.81L154,1.49,150.53,0c-2.17,1-5,4.2-5,6.92a4,4,0,0,0,1.64,3c-1.54,3.6-3,6.83-4.19,9.06h0c-3.82,7-7.42,11.22-9.54,11.49-1,.12-1.86-0.57.53-6.89l6.58-17.14-9.92,4.87s-1.17-4.17-6.31-3.52c-6.81.86-11.07,8.78-13.14,15.62-3.48,6.34-6.05,7.74-8,8-2.7.34-4.67-1.38-7.11-1.45l15.54-16.19-2.76-3.33c-5.2,2.63-9.17.46-13.52,1-6.36.8-7.58,6.71-12,15.05h0c-3.61,6.74-6.26,8.19-8.22,8.44-2.7.34-4.67-1.38-7.11-1.45L83.56,17.34,80.81,14c-5.2,2.63-9.17.46-13.52,1-6.36.8-7.58,6.71-12,15.05h0c-3.76,7-7.42,11.22-9.54,11.49-0.9.11-1.86-.51,0.58-6.9l6.52-17.13L44.38,18.6l-6,15.62c-3.87,10.13-.48,13.54,4.35,12.94,6.1-.77,11.4-7.62,15.48-15.33h0c3.45-6.51,4.56-7.93,7-8.24,2.23-.28,4.19.48,5.83,0.6L54.51,41.31l2.76,3.33c5.57-5.28,7.05-.2,13.63-1,6.73-.85,11-7.09,15.43-15.32h0c3.45-6.51,4.56-7.93,7-8.24,2.23-.28,4.19.48,5.83,0.6L82.61,37.77l2.76,3.33c5.57-5.29,7.05-.2,13.63-1,4.39-.55,7.72-3.4,10.74-7.59,0.25,3.46,2.25,6,6,5.49,4.67-.59,8.32-5.47,8.32-5.47s0.69,4.34,6.2,3.64c6.47-.81,11.61-7.59,15.75-15.36h0a93.45,93.45,0,0,0,4.24-9.11c1.43,1,2.6,1.86,2.6,2.92a5.62,5.62,0,0,1-.48,1.93L150.64,21c-3.82,9.91.58,12.45,4.72,11.93s7.48-4.12,10.53-8.89c0.9,4.5,4.34,7,9.93,6.31a16.62,16.62,0,0,0,11.08-6.67c5.41-.25,10.23-4.43,13.1-9.75A3.52,3.52,0,0,0,197,12.22ZM125,26.2s-2.44,4.14-5.36,4.51c-1.06.13-1.7-.37-1.7-1.76,0-3.41,3.92-13.87,8.11-14.4,2.33-.29,2.39,2.68,2.39,2.68Zm57.9-12.09a4.93,4.93,0,0,0-4.51,4.83,3.79,3.79,0,0,0,1.17,2.84c-1.17,1.69-2.49,2.93-3.76,3.09S173.7,24,173.7,22.3c0-3.94,4.08-15.65,8.27-16.18C183.09,6,184,6.66,184,8.63A18.75,18.75,0,0,1,182.87,14.11Z"
+                transform="translate(0 -0.01)"></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="site-address">
+            <ul>
+              <li>Pizzaro Restaurant</li>
+              <li>901-947 South Drive, Houston, TX 77057, USA</li>
+              <li>Telephone: +1 555 1234</li>
+              <li>Fax: +1 555 4444</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        <p class="copyright">Copyright © 2017 Pizzaro Template. All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
